@@ -280,7 +280,7 @@ function FilterCategories() {
                               Loading
                       </Typography>       
                       </div>
-                      <img alt="Loading" src='https://i.pinimg.com/originals/f2/9f/02/f29f025c9ff5297e8083c52b01f1a709.gif' />
+                     
               </>
           }
 

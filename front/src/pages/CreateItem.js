@@ -20,7 +20,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 function CreateItem() {
   let navigate = useNavigate();
   const [mycountry, setCountry] = useState("");
-  const [coordinates, setCoordinates] = useState({});
+
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState({});
   const [holdData, setHoldData] = useState({});
@@ -107,16 +107,6 @@ function CreateItem() {
       holdData.state = "EXPECTED";
     }
 
-    // if the user inputed coordinates add them too
-    if (Object.keys(coordinates).length > 0) {
-      var point = {
-        type: "Point",
-        coordinates: [coordinates.lat, coordinates.lng],
-      };
-      console.log(point);
-      holdData.latitudeLongitude = point;
-    }
-
     if (holdData.buy_price.length === 0) {
       holdData.buy_price = null;
     }
@@ -143,8 +133,6 @@ function CreateItem() {
       style={{
         minHeight: "100vh",
         width: "100%",
-        backgroundImage: `url("https://localhost:33123/images/background.png")`,
-        backgroundRepeat: "repeat",
       }}
     >
       <div className="createItemPage">
@@ -161,10 +149,10 @@ function CreateItem() {
             <Field id="inputCreateItem" name="name" placeholder="Item" />
             <label>Starting Price: </label>
             <ErrorMessage name="currently" component="span" />
-            <Field id="inputCreateItem" name="currently" placeholder="$$$" />
+            <Field id="inputCreateItem" name="currently"  />
             <label>Buying Price: </label>
             <ErrorMessage name="buy_price" component="span" />
-            <Field id="inputCreateItem" name="buy_price" placeholder="$$$" />
+            <Field id="inputCreateItem" name="buy_price"  />
             <label>Location: </label>
             <ErrorMessage name="location" component="span" />
             <Field id="inputCreateItem" name="location" placeholder="City" />
@@ -189,7 +177,7 @@ function CreateItem() {
               name="description"
               as={customTextArea}
               type="textarea"
-              placeholder="Write a short description here"
+              placeholder="..."
             />
             <label>Category: </label>
             <Detail

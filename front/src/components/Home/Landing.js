@@ -23,14 +23,14 @@ function Landing() {
     {
       title: "Sell",
       description: "Create an Account first to Sell Items.",
-      imageUrl: "https://localhost:33123/images/kobuR.jpg",
+      imageUrl: "https://localhost:33123/images/sellImage.webp",
       time: 1500,
     },
     {
       title: "Buy",
       description:
         "Items are put on bid and sold to the highest bidder on a public sale.",
-      imageUrl: "https://localhost:33123/images/saadR.jpg",
+      imageUrl: "https://localhost:33123/images/buyImage.jpeg",
       time: 1500,
     },
   ];
