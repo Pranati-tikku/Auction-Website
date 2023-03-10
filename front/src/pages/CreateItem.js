@@ -13,9 +13,6 @@ import Title from "../components/Typography/Title";
 import { Typography } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 
 function CreateItem() {
   let navigate = useNavigate();
@@ -83,8 +80,8 @@ function CreateItem() {
   });
 
   const onSubmit = (data) => {
-    setHoldData(data);
-    setOpenDialog(true);
+    // setHoldData(data);
+    // setOpenDialog(true);
   };
 
   useEffect(() => {

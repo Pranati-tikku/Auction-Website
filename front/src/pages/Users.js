@@ -7,11 +7,8 @@ import Header from '../components/Typography/Header';
 import ReactPaginate from 'react-paginate';
 
 // For the material modal
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-import { DataGrid } from '@mui/x-data-grid';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import NotInterestedIcon from '@mui/icons-material/NotInterested';
 

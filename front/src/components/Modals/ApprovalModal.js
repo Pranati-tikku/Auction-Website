@@ -34,9 +34,8 @@ export default function ApprovalModal() {
           <Typography id="modal-modal-title" variant="h5" component="h2">
             Application Received
           </Typography>
-          <img className='approval_photo' src='https://codenex.in/wp-content/uploads/2019/01/appdevelopment.png' />
           <Typography variant="h6" id="modal-modal-description" sx={{ mt: 2 }}>
-            You'll be able to use our services as soon as you have been approved!
+            You'll be able to use our services when the admin approves.
           </Typography>
         </Box>
       </Modal>

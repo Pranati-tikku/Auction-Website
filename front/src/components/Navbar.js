@@ -2,29 +2,12 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
 import Logout from "./Login/Logout";
-// import Badge from "@mui/material/Badge";
-// import MailIcon from "@mui/icons-material/Mail";
 
 
 // The navigatior bar
 function Navbar(props) {
   const { authState } = useContext(AuthContext);
-  // const [gotMail, setGotMail] = useState(0);
-
-  // useEffect(() => {
-  //   axios
-  //     .get(`https://localhost:33123/mail/newmailcount/${authState.id}`)
-  //     .then((respi) => {
-  //       if (respi.data.count === 0) {
-  //         setGotMail(0);
-  //       } else {
-  //         setGotMail(respi.data.count);
-  //       }
-  //       console.log(respi.data.count);
-  //     })
-  //     .catch((error) => {});
-  // });
-
+  
   return (
     <div>
       <div className="navbar gradient-custom">

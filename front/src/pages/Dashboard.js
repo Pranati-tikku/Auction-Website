@@ -2,10 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../components/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-
 import { Grid } from "@mui/material";
-import ShoppingBagSharpIcon from "@mui/icons-material/ShoppingBagSharp";
-import Recommendations from "../components/Modals/Recommendations";
 import Header from "../components/Typography/Header";
 import Title from "../components/Typography/Title";
 
@@ -91,7 +88,6 @@ function Dashboard() {
         </Grid>
       </Grid>
 
-      <Recommendations />
       <div className="profileContainer">
         <div className="informationSection">
           <div className="container">

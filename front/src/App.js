@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CreateItem from "./pages/CreateItem";
-import Item from "./pages/Item";
 import Landing from "./components/Home/Landing";
 import { AuthContext } from "./components/AuthContext";
 import { useState, useEffect } from "react";
@@ -11,11 +10,7 @@ import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import NotAllowed from "./components/Modals/NotAllowed";
-
 import CreateCategory from "./components/Admin/CreateCategory";
-import Filter from "./components/Searching/Filter";
-import FilterCategories from "./components/Searching/FilterCategories";
-
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Auctions from "./components/Searching/Auctions";
@@ -151,30 +146,6 @@ function App() {
               element={
                 <>
                   <Navbar clicked={"auctions"} /> <Auctions />
-                </>
-              }
-            />
-            <Route
-              path="/search"
-              element={
-                <>
-                  <Navbar clicked={"search"} /> <FilterCategories />
-                </>
-              }
-            />
-            <Route
-              path="/item/:id"
-              element={
-                <>
-                  <Navbar clicked={"auctions"} /> <Item />
-                </>
-              }
-            />
-            <Route
-              path="/filter"
-              element={
-                <>
-                  <Navbar clicked={"search"} /> <Filter />
                 </>
               }
             />
