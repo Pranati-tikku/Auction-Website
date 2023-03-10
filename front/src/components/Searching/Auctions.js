@@ -83,7 +83,8 @@ function Auctions() {
     };
 
   return (
-    <> 
+  
+    <div style={{height:"100vh",}}> 
     
       {  Object.keys(selectedCategory).length > 0  ?
         <Title title={selectedCategory.name} />
@@ -184,8 +185,8 @@ function Auctions() {
         }
         </div>
     </div>
-
-    </>
+</div>
+    
   )
 }
 
