@@ -18,13 +18,12 @@ router.post('/', async (req, res) => {
             surname: surname,
             email: email,
             telephone: telephone,
-            latitudeLongitude: latitudeLongitude,
+           
             location: location,
             country: country,
-            taxnumber: taxnumber,
-            sellerRating: sellerRating,
+            
             saleCount: saleCount,
-            bidderRating: bidderRating,
+            
             buyCount: buyCount,
             // this here just for safety
             admin: false,
@@ -54,7 +53,7 @@ router.post('/login', async (req, res) => {
 
             bcrypt.compare(password, user.password).then((matched)=>{
                 if(!matched){
-                    res.json({error: "Wrong User Credentials!"});
+                    res.json({error: "Wrong Input"});
                 }
                 else{
                     const accessToken = sign({username: user.username, id: user.id}, "hereputyoursecret");

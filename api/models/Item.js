@@ -20,9 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         number_of_bids: {
             type: DataTypes.INTEGER,
         },
-        latitudeLongitude: {
-            type: DataTypes.GEOMETRY, //('POINT')
-        },
+        
         location: {
             type: DataTypes.STRING,
             allowNull: false,

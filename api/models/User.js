@@ -20,18 +20,14 @@ module.exports = (sequelize, DataTypes) => {
         telephone: {
             type: DataTypes.STRING,
         },
-        latitudeLongitude: {
-            type: DataTypes.GEOMETRY,
-        },
+        
         location: {
             type: DataTypes.STRING,
         },
         country: {
             type: DataTypes.STRING,
         },
-        taxnumber: {
-            type: DataTypes.INTEGER,
-        },
+        
         admin: { 
             type: DataTypes.BOOLEAN,
             defaultValue: false,
@@ -40,18 +36,12 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
         },
-        bidderRating: {
-            type: DataTypes.FLOAT,
-            defaultValue: 0,
-        },
+       
         buyCount: {
             type: DataTypes.INTEGER,
             defaultValue: 0,
         },
-        sellerRating: {
-            type: DataTypes.FLOAT,
-            defaultValue: 0,
-        },
+       
         saleCount: {
             type: DataTypes.INTEGER,
             defaultValue: 0,
