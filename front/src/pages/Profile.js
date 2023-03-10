@@ -4,20 +4,17 @@ import axios from 'axios';
 import {AuthContext} from '../components/AuthContext';
 import Title from '../components/Typography/Title';
 import Header from '../components/Typography/Header';
-import DisplayCoordinates from '../components/Maps/DisplayCoordinates';
+
 import Detail from '../components/Typography/Detail';
 import HeaderNormal from '../components/Typography/HeaderNormal';
 import ReactPaginate from 'react-paginate';
-import ConvertDMS from '../components/Maps/ConvertDMS';
+
 
 // Material UI components
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import NotInterestedIcon from '@mui/icons-material/NotInterested';
-import PointOfSaleSharpIcon from '@mui/icons-material/PointOfSaleSharp';
-import ShoppingBagSharpIcon from '@mui/icons-material/ShoppingBagSharp';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import {Rating} from '@mui/material';
 import Box from '@mui/material/Box';
@@ -127,7 +124,7 @@ function Profile() {
                     </div>
                     <div className='footer gradient-custom'>
                         <div > {value.location}, {value.country}</div> 
-                        <div style={{ color: '#14b6e3' }}> {value.currently} € &nbsp;&nbsp;</div>
+                        <div style={{ color: '#50194d' }}> {value.currently} € &nbsp;&nbsp;</div>
                     </div>
                     </div>
             ;

@@ -10,8 +10,8 @@ import Header from '../components/Typography/Header';
 import Title from  '../components/Typography/Title';
 import HeaderNormal from '../components/Typography/HeaderNormal';
 import Categories from '../components/Modals/Categories'
-import CreateCoordinates from '../components/Maps/CreateCoordinates';
-import ConvertDMS from '../components/Maps/ConvertDMS';
+
+
 
 // Material UI components
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -30,7 +30,7 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import DisplayCoordinates from '../components/Maps/DisplayCoordinates';
+
 import DisplayPhotos from '../components/Photos/DisplayPhotos';
 import ChooseCover from '../components/Photos/ChooseCover';
 import AddPhotos from '../components/Photos/AddPhotos';
@@ -841,35 +841,6 @@ function Item() {
                         } />
                         }
 
-                    { editMode ? 
-                        <div className='shake' onClick={() => {
-                            editItem("coordinates");}} > 
-                            { Object.keys(coordinates).length > 0 ?
-                            <>
-                                <Detail text="Change the precise location on the map" />
-                            </>
-                            :
-                            <>
-                                <Detail text="Add the precise location on the map" />
-                            </>
-                            }
-                        </div>    
-                    : 
-                        <div> 
-                        { Object.keys(coordinates).length > 0 &&
-                            <>
-                            <Detail text={
-                            <div >
-                                <DisplayCoordinates lat={coordinates[0]} lng={coordinates[1]} />
-                                {ConvertDMS(coordinates[0], coordinates[1])}
-                                </div>
-                            } />
-                            </>
-                        }
-                        </div> 
-                    }
-
-
                         
                     </div>
                     <div className='rightSide' id="individual" >
@@ -1321,27 +1292,7 @@ function Item() {
                     </Box>
                 </Modal>
 
-                {/* This for the coordinates modification */}
-                <Modal
-                    open={openedCoordinates}
-                    onClose={handleClosedCoordinates}
-                    aria-labelledby="modal-modal-title"
-                    aria-describedby="modal-modal-description"
-                >
-                    <Box sx={style2}>
-                    <Typography id="modal-modal-title" variant="h5" component="h2">
-                        Select your location on the map
-                    </Typography>
-                    <div style={{color: '#00C9FF'}} >
-                        <CreateCoordinates setCoordinates={setCoordinatesValue} />
-                        { (Object.keys(coordinatesValue).length > 0) &&
-                            <Detail text={`Selected: ${coordinatesValue.lat}, ${coordinatesValue.lng}`} />
-                        }
-                    </div>
-
-                    <button className='buttonito' onClick={switchCoordinates} >CONFIRM</button>
-                    </Box>
-                </Modal>
+            
                 
                 {/* This for the category modification */}
                 <Modal

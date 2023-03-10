@@ -146,7 +146,7 @@ function LoginForm() {
             <Typography id="modal-modal-title" variant="h5" component="h2">
             Approval Pending
             </Typography>
-            {/* <img alt="Approval" className='approval_photo' src='https://codenex.in/wp-content/uploads/2019/01/appdevelopment.png' /> */}
+            
             <Typography variant="h6" id="modal-modal-description" sx={{ mt: 2 }}>
                 You will be able to sign in as the admin will approve.
             </Typography>
