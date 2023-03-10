@@ -169,46 +169,9 @@ function Profile() {
                         </div>} />
 
                 
-                    <Header text={ <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            textAlign: 'center',
-                            flexWrap: 'wrap',
-                            }}>
-                        <PointOfSaleSharpIcon />
-                        { userInfo.saleCount ? 
-                        (   <>&nbsp;Seller Rating: {userInfo.sellerRating} &nbsp; Average: &nbsp;
-                            <Rating name="read-only" value= {userInfo.sellerRating/userInfo.saleCount } readOnly precision={0.5}/>
-                            </>
-                        )
-                        :
-                        (   <>&nbsp;No Sales Yet
-                            </>
-                        )
-                        } 
-                        </div>} 
-                    />
+                    
 
-                    <Header text={ <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            textAlign: 'center',
-                            flexWrap: 'wrap',
-                            }}>
-                        <ShoppingBagSharpIcon />
-                        { userInfo.buyCount ? 
-                        (<>
-                        &nbsp;Bidder Rating: {userInfo.bidderRating} &nbsp; Average: &nbsp;
-                        <Rating name="read-only" value={userInfo.bidderRating/userInfo.buyCount } readOnly precision={0.5}/>
-                        </>)
-                        :
-                        (<>
-                        &nbsp;No Purchases Yet
-                        </>
-                        )
-                        }
-                        </div>} 
-                    />
+                   
 
                 </div>
 
@@ -244,16 +207,6 @@ function Profile() {
                         <PhoneIphoneIcon />&nbsp;
                         {userInfo.telephone}
                         </div>} />
-                        <Header text={<div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            textAlign: 'center',
-                            flexWrap: 'wrap',
-                            }}>
-                        <AssuredWorkloadIcon />&nbsp;
-                        {userInfo.taxnumber}
-                        </div>} />
-
                 </div>
 
             </Grid>
@@ -261,14 +214,7 @@ function Profile() {
             
         </Grid>
 
-        { Object.keys(coordinates).length > 0 &&
-            <Detail text={<div>
-                        {userInfo.username}'s Location on the Map
-                        <DisplayCoordinates lat={coordinates[0]} lng={coordinates[1]} />
-                        {ConvertDMS(coordinates[0], coordinates[1])}
-                </div>}
-            />
-        }
+       
             
             { !userInfo.approved &&
                             <>

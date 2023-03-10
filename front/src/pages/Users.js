@@ -169,7 +169,7 @@ function Users() {
       </div>
 
       <div className="container">
-        <button className='buttonito' onClick={handleOpen}>Check Applications</button>
+      
         <div className="container">
           
           {/* The users in icons format */}
@@ -190,33 +190,7 @@ function Users() {
         
         </div>
 
-      {/* Displaying in a modal the applications  */}
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-
-        <Box sx={style}>
-          <div className='headerito'>
-            <headerito>Users Awaiting Confirmation</headerito>
-          </div>
-          <div style={{ height: 369, width: 1100 }}>
-            <DataGrid 
-              sx={{ m: 2 ,"& .MuiDataGrid-row:hover": { backgroundColor: "skyblue" },}}
-              rows={notApprovedList}
-              columns={columns}
-              pageSize={5}
-              rowsPerPageOptions={[5]}
-              checkboxSelection
-              onSelectionModelChange={(data)=>{ setApprovedList(data); }}
-            />
-          </div>
-          <button className='buttonito' onClick={handleApprove}>Approve Selected</button>
-        </Box>
-
-       </Modal>
+      
 
         {/* Message alert */}
         <Snackbar open={openAlert} autoHideDuration={6000} onClose={handleCloseAlertR}>
