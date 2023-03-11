@@ -10,7 +10,6 @@ import Header from "../components/Typography/Header";
 import Title from "../components/Typography/Title";
 
 // Mui Components
-import { Typography } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 
@@ -80,8 +79,7 @@ function CreateItem() {
   });
 
   const onSubmit = (data) => {
-    // setHoldData(data);
-    // setOpenDialog(true);
+   
   };
 
   useEffect(() => {

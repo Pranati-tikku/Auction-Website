@@ -17,31 +17,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-// The style for the modals
-const style = {
-  
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 1100,
-  bgcolor: 'background.paper',
-  border: '2px solid lightBlue',
-  borderRadius: 6,
-  boxShadow: 24,
-  p: 4,
-};
 
-// The grid columns
-const columns = [
-    { field: 'id', headerName: 'ID', width: 70},
-    { field: 'username', headerName: 'Username', width: 160},
-    { field: 'name', headerName: 'Name', width: 160},
-    { field: 'surname', headerName: 'Surname', width: 160 },
-    { field: 'email', headerName: 'email', width: 200},
-    { field: 'telephone', headerName: 'Telephone', width: 150},
-    { field: 'taxnumber', headerName: 'Tax Number', width: 100}
-]
 
 // Displaying the Users to the admin and their information
 function Users() {

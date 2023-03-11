@@ -27,7 +27,7 @@ const style = {
 
 function Registration() {
   let navigate = useNavigate();
-  const [coordinates, setCoordinates] = useState({});
+  
   const [holdData, setHoldData] = useState({});
   const [mycountry, setCountry] = useState([]);
 
@@ -109,15 +109,6 @@ function Registration() {
   const handleCloseDialog = () => {
     setOpenDialog(false);
     holdData.country = mycountry;
-
-    // if the user inputed coordinates add them too
-    if (Object.keys(coordinates).length > 0) {
-      var point = {
-        type: "Point",
-        coordinates: [coordinates.lat, coordinates.lng],
-      };
-      holdData.latitudeLongitude = point;
-    }
 
     axios.post("https://localhost:33123/auth/", holdData).then((res) => {});
 

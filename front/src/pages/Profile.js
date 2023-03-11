@@ -266,7 +266,6 @@ function Profile() {
           <Typography id="modal-modal-title" variant="h5" component="h2">
             Approve {userInfo.username}?
           </Typography>
-          {/* <HeaderNormal text="You can't reverse this action" /> */}
           <button className="buttonitoReverse" onClick={handleClose}>
             Cancel
           </button>
